@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "wastelessia"
+version = "0.1.0"
+description = "Financial governance layer for AI spend — track LLM costs per team, feature, and client"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9"
+dependencies = [
+    "httpx>=0.27",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+    "pytest-httpx>=0.30",
+]
+examples = [
+    "anthropic>=0.40",
+]
+
+[project.urls]
+Homepage = "https://wastelessia.com"
+Repository = "https://github.com/wastelessio/wastelessia-python"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/wastelessia"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
