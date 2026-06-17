@@ -1,0 +1,48 @@
+{
+  "name": "wastelessia",
+  "version": "0.1.0",
+  "description": "Financial governance layer for AI spend — track LLM costs per team, feature, and client",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "llm",
+    "finops",
+    "cost-tracking",
+    "anthropic",
+    "openai",
+    "observability"
+  ],
+  "homepage": "https://wastelessia.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wastelessio/wastelessia-js"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}
